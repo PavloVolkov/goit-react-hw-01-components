@@ -1,0 +1,22 @@
+.statistics {
+  width: 400px;
+  border-radius: 6px;
+  background-color: greenyellow;
+}
+.title {
+  color: rgb(6, 65, 155);
+}
+.statList {
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style-type: none;
+  width: 400px;
+}
+.statList > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+}
