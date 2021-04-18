@@ -17,7 +17,15 @@ const Statistical = ({data}) => {
         </section>
     );
 };
-
+Statistical.defaultProps = {
+    data:[
+        {
+            id:"-",
+            label: "doc_format",
+            percentage: "-"
+        }
+    ]
+  };
 Statistical.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({

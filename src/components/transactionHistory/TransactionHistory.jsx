@@ -24,6 +24,17 @@ const TransactionHistory = ({data}) => {
           </div>
 };
 
+TransactionHistory.defaultProps = {
+    data:[
+        {
+            id:"-",
+            type: "undefined",
+            amount: "-",
+            currency: "undefined"
+        }
+    ]
+  };
+
 TransactionHistory.ProppTypes = {
     data: ProppTypes.arrayOf(
         ProppTypes.shape({

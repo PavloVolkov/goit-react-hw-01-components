@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const FriendsList = ({data}) => {
    return <div className={styles.FriendsListWrapper}>
-       {data.map(({id, name , avatar, isOnline}) => {
+       {data.map(({id, name, avatar, isOnline}) => {
                     return  <li key={id} className={styles.item} >
                                 {isOnline?<span className={styles.statusRed}></span>:<span className={styles.statusBlue}></span>}
                                 <img className={styles.avatar} src={avatar} alt="" />
@@ -13,6 +13,17 @@ const FriendsList = ({data}) => {
                 })}
           </div>
 };
+
+FriendsList.defaultProps = {
+    data:[
+        {
+            id:"-",
+            name: "user",
+            avatar:'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
+            isOnline: "-"
+        }
+    ]
+  };
 
 FriendsList.propTypes = {
     data: PropTypes.arrayOf(

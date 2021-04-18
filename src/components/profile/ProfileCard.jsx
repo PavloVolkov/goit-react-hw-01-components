@@ -35,6 +35,19 @@ const ProfileCard = ({data}) => {
     );
 };
 
+ProfileCard.defaultProps = {
+    data:{
+            name: "user",
+            tag: "-",
+            location: "none",
+            avatar: 'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
+            stats: {
+                followers: "-",
+                views: "-",
+                likes: "-",
+            }
+        }
+    };
 ProfileCard.propTypes = {
     data: PropTypes.shape({
         name: PropTypes.string,
