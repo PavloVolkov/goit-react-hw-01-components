@@ -2,12 +2,7 @@
   margin-bottom: 40px;
   border-radius: 6px;
 }
-.statusRed {
-  position: relative;
-}
-.statusBlue {
-  position: relative;
-}
+
 .statusRed::before {
   content: ' ';
   position: absolute;
@@ -24,28 +19,5 @@
   background-color: green;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-}
-.item {
-  font-size: 24px;
-  font-weight: bold;
-  display: grid;
-  align-items: center;
-  height: 100px;
-  width: 400px;
-  background-color: rgb(214, 216, 87);
-  -webkit-box-shadow: 0px 1px 6px 2px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: 0px 1px 6px 2px rgba(255, 255, 255, 0.2);
-  box-shadow: 1px -2px 2px 1px rgba(255, 255, 255, 0.2);
-  grid-template-columns: 1fr 1fr 3fr;
-}
-.item > span {
-  display: flex;
-  justify-content: center;
-}
-.item > img {
-  display: block;
-  margin: 0 auto;
-  width: 70px;
   border-radius: 50%;
 }

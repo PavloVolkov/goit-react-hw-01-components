@@ -1,39 +1,44 @@
-import styles from './friendsList.module.css'
+import styles from './friendsList.module.css';
 import PropTypes from 'prop-types';
-
-const FriendsList = ({data}) => {
-   return <div className={styles.FriendsListWrapper}>
-       {data.map(({id, name, avatar, isOnline}) => {
-                    return  <li key={id} className={styles.item} >
-                                {isOnline?<span className={styles.statusRed}></span>:<span className={styles.statusBlue}></span>}
-                                <img className={styles.avatar} src={avatar} alt="" />
-                                <p className={styles.name}>{name}</p>
-                                <span></span>
-                            </li>
-                })}
-          </div>
+import FriendsListItem from './friendsListItem/friendsListItem';
+const FriendsList = ({ friends }) => {
+  return (
+    <div className={styles.FriendsListWrapper}>
+      {friends.map(({ id, name, avatar, isOnline }) => {
+        return (
+          <FriendsListItem
+            id={id}
+            name={name}
+            avatar={avatar}
+            isOnline={isOnline}
+          />
+        );
+      })}
+    </div>
+  );
 };
 
-FriendsList.defaultProps = {
-    data:[
-        {
-            id:"-",
-            name: "user",
-            avatar:'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
-            isOnline: "-"
-        }
-    ]
-  };
+// FriendsList.defaultProps = {
+//   data: [
+//     {
+//       id: '-',
+//       name: 'user',
+//       avatar:
+//         'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
+//       isOnline: '-',
+//     },
+//   ],
+// };
 
-FriendsList.propTypes = {
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number,
-            name: PropTypes.string,
-            avatar: PropTypes.string,
-            isOnline: PropTypes.bool
-        })
-    )
-};
+// FriendsList.propTypes = {
+//   data: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.number,
+//       name: PropTypes.string,
+//       avatar: PropTypes.string,
+//       isOnline: PropTypes.bool,
+//     }),
+//   ),
+// };
 
 export default FriendsList;
