@@ -18,22 +18,39 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
         <ul className={styles.stats}>
           <li>
             <span className={styles.label}>Followers</span>
-            <span className={styles.quantity}></span>
+            <span className={styles.quantity}>{stats.followers}</span>
           </li>
           <li>
             <span className={styles.label}>Views</span>
-            <span className={styles.quantity}>{}</span>
+            <span className={styles.quantity}>{stats.views}</span>
           </li>
           <li>
             <span className={styles.label}>Likes</span>
-            <span className={styles.quantity}>{}</span>
+            <span className={styles.quantity}>{stats.likes}</span>
           </li>
         </ul>
       </div>
     </div>
   );
 };
+Profile.defaultProps = {
+  id: '-',
+  name: 'user',
+  avatar:
+    'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
+  isOnline: '-',
+};
 
-Profile.propTypes = {};
+Profile.propTypes = {
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};
 
 export default Profile;

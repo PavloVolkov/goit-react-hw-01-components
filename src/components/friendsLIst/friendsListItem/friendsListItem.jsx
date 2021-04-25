@@ -12,6 +12,18 @@ const FriendsListItem = ({ id, name, avatar, isOnline }) => {
   );
 };
 
-FriendsListItem.propTypes = {};
+FriendsListItem.defaultProps = {
+  id: '-',
+  name: 'user',
+  avatar:
+    'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
+  isOnline: '-',
+};
 
+FriendsListItem.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  avatar: PropTypes.string,
+  isOnline: PropTypes.bool,
+};
 export default FriendsListItem;

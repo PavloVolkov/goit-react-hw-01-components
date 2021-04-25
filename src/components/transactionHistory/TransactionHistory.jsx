@@ -1,4 +1,4 @@
-import ProppTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './transactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
@@ -28,26 +28,26 @@ const TransactionHistory = ({ items }) => {
   );
 };
 
-// TransactionHistory.defaultProps = {
-//     data:[
-//         {
-//             id:"-",
-//             type: "undefined",
-//             amount: "-",
-//             currency: "undefined"
-//         }
-//     ]
-//   };
+TransactionHistory.defaultProps = {
+  items: [
+    {
+      id: '-',
+      type: 'undefined',
+      amount: '-',
+      currency: 'undefined',
+    },
+  ],
+};
 
-// TransactionHistory.ProppTypes = {
-//     data: ProppTypes.arrayOf(
-//         ProppTypes.shape({
-//             id: ProppTypes.number,
-//             type: ProppTypes.string,
-//             amount: ProppTypes.string,
-//             currency: ProppTypes.bool
-//         })
-//     )
-// };
+TransactionHistory.ProppTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.bool,
+    }),
+  ),
+};
 
 export default TransactionHistory;

@@ -18,27 +18,27 @@ const FriendsList = ({ friends }) => {
   );
 };
 
-// FriendsList.defaultProps = {
-//   data: [
-//     {
-//       id: '-',
-//       name: 'user',
-//       avatar:
-//         'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
-//       isOnline: '-',
-//     },
-//   ],
-// };
+FriendsList.defaultProps = {
+  friends: [
+    {
+      id: '-',
+      name: 'user',
+      avatar:
+        'https://yt3.ggpht.com/ytc/AAUvwniQnSWCntU5FpkgEeMsqpKqRq9d1nGZ-GwKM6iaOA=s900-c-k-c0x00ffffff-no-rj',
+      isOnline: '-',
+    },
+  ],
+};
 
-// FriendsList.propTypes = {
-//   data: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number,
-//       name: PropTypes.string,
-//       avatar: PropTypes.string,
-//       isOnline: PropTypes.bool,
-//     }),
-//   ),
-// };
+FriendsList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      avatar: PropTypes.string,
+      isOnline: PropTypes.bool,
+    }),
+  ),
+};
 
 export default FriendsList;

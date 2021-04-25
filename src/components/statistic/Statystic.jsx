@@ -27,9 +27,19 @@ const Statystic = ({ stats, title }) => {
   );
 };
 
-Statystic.propTypes = {};
+Statystic.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    }),
+  ),
+};
 
 Statystic.defaultProps = {
-  // title: 'Upload stats',
+  id: 'none',
+  label: 'none',
+  percentage: 0,
 };
 export default Statystic;

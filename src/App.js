@@ -25,14 +25,3 @@ function App() {
 }
 
 export default App;
-
-/* <Profile
-        avatar={profile.avatar}
-        name={profile.name}
-        tag={profile.tag}
-        location={profile.location}
-        stats={profile.stats}
-      />
-      <FriendsList data={friendsList} />
-      <Statistic stats={statistic} />
-      <TransactionHistory data={transactionHistory} /> */
