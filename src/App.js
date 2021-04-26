@@ -6,7 +6,7 @@ import friends from './components/friendsLIst/friendList.json';
 import statistic from './components/statistic/statistic.json';
 import Statystic from './components/statistic/Statystic';
 import Profile from './components/profile/Profile';
-import profile from './components/profile/profile.json';
+import profile from './components/profile/Proffile.json';
 function App() {
   return (
     <div className="App">
